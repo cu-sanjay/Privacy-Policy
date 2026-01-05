@@ -5,46 +5,51 @@ const extensions = {
   youtube: {
     name: "YouTube Ad Blocker 2025",
     iconDomain: "youtube.com",
-    lastUpdated: "4 Jan 2026",
+    lastUpdated: "January 5, 2026",
     policy: `
       <div class="section">
-        <h3>Overview</h3>
+        <h3>1. Commitment to Privacy</h3>
         <p>
-          YouTube Ad Blocker 2025 is a privacy-first browser extension designed to
-          reduce ad interruptions by adjusting playback speed during advertisements.
+          We believe privacy is a fundamental right. YouTube Ad Blocker 2025 is designed to operate entirely within your browser, ensuring your data never leaves your device.
         </p>
       </div>
 
       <div class="section">
-        <h3>Data Collection</h3>
-        <p>No personal or usage data is collected, stored, transmitted, or shared.</p>
+        <h3>2. Zero Data Collection</h3>
+        <p>This extension does not collect, store, transmit, or monetize any user data. Specifically:</p>
         <ul>
-          <li>No identifiers or account data</li>
-          <li>No browsing or watch history</li>
-          <li>No analytics, telemetry, or tracking</li>
+          <li>We do not track your browsing history or YouTube watch history.</li>
+          <li>We do not collect personal identifiers, email addresses, or account information.</li>
+          <li>We do not use any third-party analytics, telemetry, or tracking scripts.</li>
         </ul>
       </div>
 
       <div class="section">
-        <h3>Local Storage</h3>
+        <h3>3. Local Processing</h3>
         <p>
-          Settings such as playback speed and extension state are stored locally
-          using browser storage APIs and never leave your device.
+          All ad-blocking logic and playback speed adjustments happen locally on your machine. Any settings you customize are stored using the browser's local storage API and are never synced to external servers.
         </p>
       </div>
 
       <div class="section">
-        <h3>Permissions</h3>
+        <h3>4. Required Permissions</h3>
         <ul>
-          <li>activeTab for playback control</li>
-          <li>storage for saving preferences</li>
-          <li>host permissions limited to YouTube domains</li>
+          <li><strong>activeTab:</strong> Used solely to detect and manage video playback on the current YouTube page.</li>
+          <li><strong>storage:</strong> Used to remember your preferred playback speed settings locally.</li>
+          <li><strong>Host Permissions:</strong> Strictly limited to YouTube domains (youtube.com) to perform its core function.</li>
         </ul>
       </div>
 
       <div class="section">
-        <h3>Contact</h3>
-        <p>Email: privacy@ytadblocker2025.com</p>
+        <h3>5. Transparency & Security</h3>
+        <p>
+          The extension does not fetch remote code or interact with external APIs. Its behavior is consistent, predictable, and fully transparent.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>6. Contact</h3>
+        <p>For any privacy-related inquiries, please contact us at: <strong>sanjay@mailchat.me</strong></p>
       </div>
     `
   },
@@ -52,42 +57,47 @@ const extensions = {
   gemini: {
     name: "Gemini Watermark Remover",
     iconDomain: "gemini.google.com",
-    lastUpdated: "4 Jan 2026",
+    lastUpdated: "January 5, 2026",
     policy: `
       <div class="section">
-        <h3>Overview</h3>
+        <h3>1. Core Principle</h3>
         <p>
-          Gemini Watermark Remover is a lightweight extension that removes
-          AI-generated watermarks from images downloaded from Gemini.
+          Gemini Watermark Remover is a specialized tool built with a single purpose: enhancing your creative workflow while maintaining absolute privacy.
         </p>
       </div>
 
       <div class="section">
-        <h3>Data Handling</h3>
+        <h3>2. No External Communication</h3>
         <p>
-          All processing happens locally inside your browser.
-          No data is collected, logged, or transmitted.
+          The extension operates in a completely isolated environment. It does not have background networking capabilities and cannot communicate with any external servers.
         </p>
       </div>
 
       <div class="section">
-        <h3>Permissions</h3>
+        <h3>3. Image Processing</h3>
+        <p>
+          Watermark removal is performed using client-side canvas operations. Your images are processed in-memory and are never uploaded, saved, or logged by the extension.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>4. Permissions Policy</h3>
         <ul>
-          <li>Host access limited to gemini.google.com</li>
-          <li>No background networking</li>
+          <li><strong>Access:</strong> Limited strictly to gemini.google.com.</li>
+          <li><strong>Data:</strong> No access to your Google account details or personal files.</li>
         </ul>
       </div>
 
       <div class="section">
-        <h3>Security</h3>
+        <h3>5. Updates</h3>
         <p>
-          The extension does not use remote code, external APIs, or third-party services.
+          Any future updates will strictly adhere to this "Zero Data" policy. We will never introduce features that compromise user privacy.
         </p>
       </div>
 
       <div class="section">
-        <h3>Contact</h3>
-        <p>Email: sanjay@mailchat.me</p>
+        <h3>6. Support</h3>
+        <p>Questions? Reach out via email: <strong>sanjay@mailchat.me</strong></p>
       </div>
     `
   }
@@ -96,14 +106,20 @@ const extensions = {
 if (!extensions[path]) {
   app.innerHTML = `
     <div class="card">
-      <h2>Privacy Policies for Browser Extensions</h2>
+      <h2>Extension Privacy Hub</h2>
       <p style="margin-top:12px;color:var(--muted)">
-        Select an extension:
+        Select an extension to view its comprehensive privacy policy and data handling practices.
       </p>
-      <ul style="margin-top:16px">
-        <li><a href="/youtube">YouTube Ad Blocker 2025</a></li>
-        <li><a href="/gemini">Gemini Watermark Remover</a></li>
-      </ul>
+      <div class="ext-list">
+        <a href="/youtube" class="ext-item">
+          <img src="https://www.google.com/s2/favicons?sz=64&domain=youtube.com" width="32" height="32" style="border-radius:6px">
+          <span>YouTube Ad Blocker</span>
+        </a>
+        <a href="/gemini" class="ext-item">
+          <img src="https://www.google.com/s2/favicons?sz=64&domain=gemini.google.com" width="32" height="32" style="border-radius:6px">
+          <span>Gemini Remover</span>
+        </a>
+      </div>
     </div>
   `;
 } else {
@@ -114,10 +130,12 @@ if (!extensions[path]) {
         <img src="https://www.google.com/s2/favicons?sz=128&domain=${ext.iconDomain}" />
         <div>
           <h2>${ext.name}</h2>
-          <p style="color:var(--muted)">Last updated: ${ext.lastUpdated}</p>
+          <p style="color:var(--muted)">Protocol Version: 1.0.4 · ${ext.lastUpdated}</p>
         </div>
       </div>
-      ${ext.policy}
+      <div class="policy-content">
+        ${ext.policy}
+      </div>
     </div>
   `;
 }
