@@ -70,7 +70,9 @@ header {
 
 nav {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -245,15 +247,18 @@ footer a:hover {
   color: var(--accent);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header {
     padding: 20px;
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  nav {
     gap: 16px;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 12px 20px;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .card {
@@ -267,5 +272,19 @@ footer a:hover {
 
   .ext-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 13px;
+  }
+
+  .extension-header h2 {
+    font-size: 22px;
+  }
+
+  main {
+    margin: 40px auto;
   }
 }

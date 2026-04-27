@@ -4,7 +4,7 @@ const path = window.location.pathname.replace("/", "");
 const extensions = {
   youtube: {
     name: "YouTube Ad Blocker 2025",
-    icon: "https://www.google.com/s2/favicons?sz=128&domain=youtube.com",
+    iconDomain: "youtube.com",
     lastUpdated: "January 5, 2026",
     policy: `
       <div class="section">
@@ -56,7 +56,7 @@ const extensions = {
 
   gemini: {
     name: "Gemini Watermark Remover",
-    icon: "https://www.google.com/s2/favicons?sz=128&domain=gemini.google.com",
+    iconDomain: "gemini.google.com",
     lastUpdated: "January 5, 2026",
     policy: `
       <div class="section">
@@ -103,8 +103,8 @@ const extensions = {
   },
 
   clipboard: {
-    name: "Clipboard Eternity",
-    icon: "https://i.imgur.com/rdgDdfS.png",
+    name: "Clipboard Eternity – Copy Forever",
+    iconDomain: "i.imgur.com",
     lastUpdated: "April 3, 2026",
     policy: `
       <div class="section">
@@ -125,7 +125,7 @@ const extensions = {
         <h3>3. Data Handling Transparency</h3>
         <ul>
           <li>Copied content (text or URLs) is stored locally for user convenience.</li>
-          <li>URLs may be automatically categorized as "smart links" for easier access.</li>
+          <li>URLs may be automatically categorized as “smart links” for easier access.</li>
           <li>No background data collection occurs beyond user-triggered copy actions.</li>
         </ul>
       </div>
@@ -175,171 +175,6 @@ const extensions = {
         </p>
       </div>
     `
-  },
-
-  speed: {
-    name: "SpeedX",
-    icon: "https://i.imgur.com/xvW3dZZ.png",
-    lastUpdated: "April 27, 2026",
-    policy: `
-      <div class="section">
-        <h3>1. What SpeedX Does</h3>
-        <p>
-          SpeedX is a video speed controller that works on any website with HTML5 video content, including YouTube, Netflix, Coursera, Udemy, Vimeo, and Facebook. All speed control logic runs entirely within your browser. No data ever leaves your device.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>2. Zero Data Collection</h3>
-        <p>SpeedX does not collect, store, transmit, or share any user data. Specifically:</p>
-        <ul>
-          <li>No browsing history or watch history is tracked.</li>
-          <li>No personal identifiers, email addresses, or account information is collected.</li>
-          <li>No analytics, telemetry, or third-party tracking scripts are used.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>3. Local Settings Only</h3>
-        <p>
-          Your preferred playback speed and any other settings are stored using the browser's local storage. This data never leaves your device and is never synced to any external server.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>4. How It Works</h3>
-        <p>SpeedX controls video playback using the browser's native HTML5 video API:</p>
-        <ul>
-          <li>Supports speeds from 0.25x up to 20x.</li>
-          <li>Provides keyboard shortcuts (plus, minus, and number presets) for quick adjustments.</li>
-          <li>Displays a floating overlay on the video showing the current speed.</li>
-          <li>Remembers your last-used speed across sessions.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>5. Permissions</h3>
-        <ul>
-          <li><strong>activeTab:</strong> Required to detect and interact with video elements on the current page.</li>
-          <li><strong>storage:</strong> Used to persist your speed preference locally.</li>
-          <li><strong>Host Permissions:</strong> Limited to sites where HTML5 video is present. No access to unrelated pages or data.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>6. No Remote Code</h3>
-        <p>
-          SpeedX does not fetch or execute any code from remote servers. Its full behavior is contained within the extension package as reviewed and published on the Chrome Web Store.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>7. Contact</h3>
-        <p>For privacy-related questions, contact: <strong>sanjay@mailchat.me</strong></p>
-      </div>
-    `
-  },
-
-  scroll: {
-    name: "Auto Scroll",
-    icon: "https://i.imgur.com/hDXlxwB.png",
-    lastUpdated: "April 27, 2026",
-    policy: `
-      <div class="section">
-        <h3>1. What Auto Scroll Does</h3>
-        <p>
-          Auto Scroll lets you scroll any website automatically at a smooth, adjustable pace. It is built for long reading sessions, browsing feeds, and hands-free usage. All functionality runs entirely inside your browser.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>2. Zero Data Collection</h3>
-        <p>Auto Scroll does not collect, store, transmit, or share any user data. Specifically:</p>
-        <ul>
-          <li>No browsing history or page visit data is tracked.</li>
-          <li>No personal identifiers or account information is collected.</li>
-          <li>No analytics, telemetry, or third-party tracking is used.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>3. Local Settings Only</h3>
-        <p>
-          Your scroll speed and direction preferences are stored using the browser's local storage. This data stays on your device and is never transmitted anywhere.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>4. No External Communication</h3>
-        <p>
-          Auto Scroll does not connect to any external APIs, servers, or third-party services. It has no network activity beyond rendering within your browser tab.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>5. Permissions</h3>
-        <ul>
-          <li><strong>activeTab:</strong> Required to inject the scroll controller into the current page.</li>
-          <li><strong>storage:</strong> Used to save your scroll settings locally.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>6. Contact</h3>
-        <p>For privacy-related questions, contact: <strong>sanjay@mailchat.me</strong></p>
-      </div>
-    `
-  },
-
-  fonts: {
-    name: "Font Override",
-    icon: "https://i.imgur.com/6I4Dltr.png",
-    lastUpdated: "April 27, 2026",
-    policy: `
-      <div class="section">
-        <h3>1. What Font Override Does</h3>
-        <p>
-          Font Override lets you replace the fonts on any website with a font of your choosing. It is built for readability, accessibility, and personal preference. All processing happens locally within your browser.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>2. Zero Data Collection</h3>
-        <p>Font Override does not collect, store, transmit, or share any user data. Specifically:</p>
-        <ul>
-          <li>No browsing history or page content is tracked.</li>
-          <li>No personal identifiers or account information is collected.</li>
-          <li>No analytics, telemetry, or third-party tracking is used.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>3. Local Settings Only</h3>
-        <p>
-          Your font preferences are stored exclusively on your device using the browser's local storage API. Settings are never uploaded, synced, or shared with any external server.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>4. No External Communication</h3>
-        <p>
-          Font Override does not connect to any external APIs or servers. If a custom font is loaded via a URL you provide, that request is made directly by your browser and is not proxied or logged by the extension.
-        </p>
-      </div>
-
-      <div class="section">
-        <h3>5. Permissions</h3>
-        <ul>
-          <li><strong>activeTab:</strong> Required to apply the selected font to the current page's content.</li>
-          <li><strong>storage:</strong> Used to remember your font preferences locally.</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h3>6. Contact</h3>
-        <p>For privacy-related questions, contact: <strong>sanjay@mailchat.me</strong></p>
-      </div>
-    `
   }
 };
 
@@ -360,20 +195,8 @@ if (!extensions[path]) {
           <span>Gemini Remover</span>
         </a>
         <a href="/clipboard" class="ext-item">
-          <img src="https://i.imgur.com/rdgDdfS.png" width="32" height="32" style="border-radius:6px">
+          <img src="https://i.imgur.com/rKKcrqc.png" width="32" height="32" style="border-radius:6px">
           <span>Clipboard Eternity</span>
-        </a>
-        <a href="/speed" class="ext-item">
-          <img src="https://i.imgur.com/xvW3dZZ.png" width="32" height="32" style="border-radius:6px">
-          <span>SpeedX</span>
-        </a>
-        <a href="/scroll" class="ext-item">
-          <img src="https://i.imgur.com/hDXlxwB.png" width="32" height="32" style="border-radius:6px">
-          <span>Auto Scroll</span>
-        </a>
-        <a href="/fonts" class="ext-item">
-          <img src="https://i.imgur.com/6I4Dltr.png" width="32" height="32" style="border-radius:6px">
-          <span>Font Override</span>
         </a>
       </div>
     </div>
@@ -383,7 +206,7 @@ if (!extensions[path]) {
   app.innerHTML = `
     <div class="card">
       <div class="extension-header">
-        <img src="${ext.icon}" />
+        <img src="${path === 'clipboard' ? 'https://i.imgur.com/rKKcrqc.png' : `https://www.google.com/s2/favicons?sz=128&domain=${ext.iconDomain}`}" />
         <div>
           <h2>${ext.name}</h2>
           <p style="color:var(--muted)">Protocol Version: 1.0.4 · ${ext.lastUpdated}</p>
