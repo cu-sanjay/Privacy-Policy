@@ -57,7 +57,7 @@ const extensions = {
   gemini: {
     name: "Gemini Watermark Remover",
     icon: "https://www.google.com/s2/favicons?sz=128&domain=gemini.google.com",
-    lastUpdated: "January 5, 2026",
+    lastUpdated: "May 24, 2026",
     policy: `
       <div class="section">
         <h3>1. Core Principle</h3>
@@ -172,6 +172,65 @@ const extensions = {
         <h3>9. Contact</h3>
         <p>
           For privacy-related questions, contact: <strong>sanjay@mailchat.me</strong>
+        </p>
+      </div>
+    `
+  },
+
+  discord: {
+    name: "Discord Web Auto Quest Extension",
+    icon: "https://i.imgur.com/SVGoiJC.png",
+    lastUpdated: "May 31, 2026",
+    policy: `
+      <div class="section">
+        <h3>1. Introduction</h3>
+        <p>
+          Discord Web Auto Quest Extension automates quest completion on <strong>discord.com/quest-home</strong> while running entirely within your browser.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>2. Local Operation</h3>
+        <p>
+          The extension injects helper scripts into the active Discord tab and interacts only with Discord's own quest API endpoints. No external servers or third-party services are contacted.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>3. No Data Collection</h3>
+        <p>
+          This extension does not collect, store, transmit, or share user data. It does not use analytics, telemetry, or any remote logging.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>4. Permissions</h3>
+        <ul>
+          <li><strong>Host Permission:</strong> <code>https://discord.com/*</code> to run content scripts and access Discord quest endpoints.</li>
+          <li><strong>scripting:</strong> To inject the quest automation script into the active tab.</li>
+          <li><strong>activeTab:</strong> To target the current Discord tab for script injection.</li>
+          <li><strong>declarativeNetRequestWithHostAccess:</strong> To modify Discord request headers for Electron desktop client emulation.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>5. How It Works</h3>
+        <p>
+          The extension adds an in-page button and status panel on the Discord quest page, and can optionally run quests sequentially or in parallel. The default mode is sequential for safer execution.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>6. User Responsibility</h3>
+        <p>
+          The extension is provided as-is. Users should keep the quest page open while automation runs and use the tool responsibly.
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>7. Contact</h3>
+        <p>
+          For privacy questions or issues, use the GitHub repo or browser extension listing.
         </p>
       </div>
     `
@@ -362,6 +421,10 @@ if (!extensions[path]) {
         <a href="/clipboard" class="ext-item">
           <img src="https://i.imgur.com/rdgDdfS.png" width="32" height="32" style="border-radius:6px">
           <span>Clipboard Eternity</span>
+        </a>
+        <a href="/discord" class="ext-item">
+          <img src="https://i.imgur.com/SVGoiJC.png" width="32" height="32" style="border-radius:6px">
+          <span>Discord Auto Quest</span>
         </a>
         <a href="/speed" class="ext-item">
           <img src="https://i.imgur.com/xvW3dZZ.png" width="32" height="32" style="border-radius:6px">
